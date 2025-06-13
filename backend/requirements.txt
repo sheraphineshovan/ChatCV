@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+python-multipart
+langchain
+langchain-community
+langchain-text-splitters
+python-dotenv
+requests
+pypdf
+langchain-openai
+langchain-chroma
+faiss-cpu
+websockets

@@ -1,0 +1,39 @@
+# Python
+backend/venv/
+backend/__pycache__/
+backend/app/__pycache__/
+backend/app/*/__pycache__/
+backend/.env
+backend/.env.*
+backend/chroma_db/
+
+# VSCode
+.vscode/
+
+# Node.js
+frontend/node_modules/
+frontend/.next/
+frontend/.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Misc
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+
+# Test/coverage
+coverage/
+*.cover
+*.py,cover
+.hypothesis/
+
+# Build
+build/
+dist/
