@@ -1,58 +1,57 @@
-# Backend for Upload-and-Chat with Your Resume
+# Backend for ChatCV
 
-This backend application is built using FastAPI and provides endpoints for uploading resumes, chatting with the uploaded content, and calculating role-fit scores.
+A FastAPI backend that provides endpoints for uploading resumes, processing them, and enabling AI-powered chat interactions using RAG (Retrieval Augmented Generation).
 
-## Project Structure
+## Quick Start
 
-- **app/**: Contains the main application code.
-  - **api/**: Contains the API endpoint implementations.
-    - **upload.py**: Handles file uploads and processing.
-    - **chat.py**: Manages WebSocket interactions for chatting with the resume.
-    - **score.py**: Calculates the role-fit score based on the resume content.
-  - **services/**: Contains business logic and services.
-    - **file_processing.py**: Functions for processing uploaded files and extracting text.
-    - **vector_store.py**: Manages the vector store for embeddings.
-    - **rag_chain.py**: Implements the RAG chain for question answering.
-    - **scoring.py**: Functions for analyzing resumes and calculating scores.
-  - **models/**: Contains data models used in the application.
-    - **chat_history.py**: Defines the model for storing chat history.
-  - **utils/**: Utility functions for various tasks.
-    - **security.py**: Functions for file sanitization and security checks.
-    - **session.py**: Manages user session data.
-
-## Setup Instructions
-
-1. **Clone the Repository**
-   ```bash
-   git clone <repository-url>
-   cd upload-and-chat-with-your-resume/backend
-   ```
-
-2. **Create a Virtual Environment**
+1. Create and activate virtual environment:
    ```bash
    python -m venv venv
-   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+   venv\Scripts\activate  # Windows
+   source venv/bin/activate  # macOS/Linux
    ```
 
-3. **Install Dependencies**
+2. Install dependencies:
    ```bash
    pip install -r requirements.txt
    ```
 
-4. **Environment Variables**
-   Copy the `.env.example` to `.env` and fill in the required variables.
-
-5. **Run the Application**
+3. Start the server:
    ```bash
    uvicorn app.main:app --reload
    ```
+   The API will be available at `http://localhost:8000`
 
-## Usage Guidelines
+## Project Structure
 
-- **Upload Resume**: Send a POST request to `/upload/` with the PDF file.
-- **Chat with Resume**: Establish a WebSocket connection to `/chat/{session_id}` to interact with the uploaded resume.
-- **Calculate Role-Fit Score**: Send a request to `/score/` with the necessary parameters to get the score based on the resume content.
+- `app/`: Main application code
+  - `api/`: API endpoints
+  - `services/`: Business logic
+  - `models/`: Data models
+  - `utils/`: Utility functions
+- `data/`: Storage for uploaded files
+- `chroma_db/`: Vector database for embeddings
+
+## Features
+
+- PDF resume processing and text extraction
+- Vector embeddings for semantic search
+- WebSocket-based chat interface
+- RAG-powered question answering
+- Secure file handling
+
+## API Documentation
+
+- Swagger UI: `http://localhost:8000/docs`
+- ReDoc: `http://localhost:8000/redoc`
+
+## Development
+
+- Built with FastAPI
+- Uses ChromaDB for vector storage
+- Implements WebSocket for real-time chat
+- Includes security measures for file handling
 
 ## License
 
-This project is licensed under the MIT License. See the LICENSE file for more details.
+This project is licensed under the MIT License.

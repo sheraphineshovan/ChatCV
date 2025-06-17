@@ -6,6 +6,7 @@ backend/app/*/__pycache__/
 backend/.env
 backend/.env.*
 backend/chroma_db/
+backend/data/
 
 # VSCode
 .vscode/

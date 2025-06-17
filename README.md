@@ -7,9 +7,23 @@ This project allows users to upload their resumes in PDF format and interact wit
 The project is organized into two main directories: `backend` and `frontend`.
 
 - **Backend**: Contains the FastAPI application responsible for handling file uploads, processing resumes, and managing chat interactions.
-- **Frontend**: Built with Next.js, this directory includes the user interface for uploading resumes and chatting with the AI assistant.
+- **Frontend**: Built with Next.js and Tailwind CSS, this directory includes the user interface for uploading resumes and chatting with the AI assistant.
 
-## Setup Instructions
+## Quick Start
+
+The project includes batch files for easy startup on Windows:
+
+1. Start the backend server:
+   ```bash
+   start_backend.bat
+   ```
+
+2. Start the frontend development server:
+   ```bash
+   start_frontend.bat
+   ```
+
+## Manual Setup
 
 ### Backend Setup
 
@@ -18,29 +32,19 @@ The project is organized into two main directories: `backend` and `frontend`.
    cd backend
    ```
 
-2. Create a virtual environment:
+2. Create and activate a virtual environment:
    ```bash
    python -m venv venv
+   venv\Scripts\activate  # Windows
+   source venv/bin/activate  # macOS/Linux
    ```
 
-3. Activate the virtual environment:
-   - On Windows:
-     ```bash
-     venv\Scripts\activate
-     ```
-   - On macOS/Linux:
-     ```bash
-     source venv/bin/activate
-     ```
-
-4. Install the required dependencies:
+3. Install dependencies:
    ```bash
    pip install -r requirements.txt
    ```
 
-5. Create a `.env` file based on the `.env.example` file to configure environment variables.
-
-6. Run the FastAPI application:
+4. Run the FastAPI application:
    ```bash
    uvicorn app.main:app --reload
    ```
@@ -52,28 +56,28 @@ The project is organized into two main directories: `backend` and `frontend`.
    cd frontend
    ```
 
-2. Install the necessary packages:
+2. Install dependencies:
    ```bash
    npm install
    ```
 
-3. Start the Next.js development server:
+3. Start the development server:
    ```bash
    npm run dev
    ```
 
-## Usage Guidelines
-
-1. Open your web browser and navigate to `http://localhost:3000` to access the application.
-2. Use the file upload interface to upload your resume in PDF format.
-3. Once uploaded, you can interact with the AI assistant by typing questions related to your resume in the chat interface.
-4. The application will provide responses based on the content of your resume.
-
 ## Features
 
-- **File Upload**: Securely upload PDF resumes.
-- **Chat Interface**: Engage in a conversation with the AI assistant about your resume.
-- **Role-Fit Scoring**: Analyze your resume against specific job criteria to assess suitability.
+- **Resume Upload**: Upload and process PDF resumes
+- **AI Chat Interface**: Interact with your resume using natural language
+- **Modern UI**: Built with Next.js and Tailwind CSS for a responsive design
+- **RAG Integration**: Powered by advanced language models for intelligent responses
+
+## Development
+
+- Backend runs on `http://localhost:8000`
+- Frontend runs on `http://localhost:3000`
+- API documentation available at `http://localhost:8000/docs`
 
 ## Contributing
 
@@ -81,4 +85,4 @@ Contributions are welcome! Please feel free to submit a pull request or open an 
 
 ## License
 
-This project is licensed under the MIT License. See the LICENSE file for more details.
+This project is licensed under the MIT License.

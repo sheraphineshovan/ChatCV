@@ -1,50 +1,43 @@
-# Frontend for Upload-and-Chat with Your Resume
+# Frontend for ChatCV
 
-This project is a web application that allows users to upload their resumes and interact with them through a chat interface. The application is built using Next.js for the frontend and FastAPI for the backend.
+A modern web application built with Next.js and Tailwind CSS that allows users to upload their resumes and interact with them through an AI-powered chat interface.
 
-## Getting Started
+## Quick Start
 
-To get started with the frontend, follow these steps:
-
-1. **Clone the Repository:**
-   ```bash
-   git clone <repository-url>
-   cd upload-and-chat-with-your-resume/frontend
-   ```
-
-2. **Install Dependencies:**
-   Make sure you have Node.js installed. Then, run the following command to install the necessary packages:
+1. Install dependencies:
    ```bash
    npm install
    ```
 
-3. **Run the Development Server:**
-   Start the Next.js development server:
+2. Start the development server:
    ```bash
    npm run dev
    ```
    The application will be available at `http://localhost:3000`.
 
-## File Structure
+## Project Structure
 
-- `app/`: Contains the main application files, including pages and global styles.
-- `components/`: Contains reusable React components such as file upload and chat interfaces.
-- `hooks/`: Contains custom hooks for managing WebSocket connections.
-- `public/`: Directory for static assets.
-- `tailwind.config.js`: Configuration file for Tailwind CSS.
-- `package.json`: Lists the dependencies and scripts for the frontend application.
-- `tsconfig.json`: TypeScript configuration file.
+- `app/`: Next.js application routes and layouts
+- `components/`: Reusable React components
+- `hooks/`: Custom React hooks
+- `public/`: Static assets
+- `tailwind.config.js`: Tailwind CSS configuration
+- `tsconfig.json`: TypeScript configuration
 
 ## Features
 
-- **Resume Upload:** Users can upload their resumes in PDF format.
-- **Chat Interface:** Users can interact with the AI assistant to ask questions about their resumes.
-- **Role-Fit Score:** Users can receive a score based on how well their resume matches a specified job role.
+- Modern, responsive UI with Tailwind CSS
+- Resume upload and processing
+- Real-time chat interface
+- WebSocket integration for live updates
 
-## Contributing
+## Development
 
-Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
+- Built with Next.js 14
+- Styled with Tailwind CSS
+- TypeScript for type safety
+- ESLint for code quality
 
 ## License
 
-This project is licensed under the MIT License. See the LICENSE file for more details.
+This project is licensed under the MIT License.
